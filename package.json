@@ -1,0 +1,14 @@
+{
+  "name": "thinkwhat-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "start": "npm run start:api",
+    "start:api": "npm --prefix apps/api run start:dev",
+    "start:mobile": "npm --prefix apps/mobile run start",
+    "build:api": "npm --prefix apps/api run build",
+    "typecheck:mobile": "npm --prefix apps/mobile exec -- tsc --noEmit"
+  }
+}

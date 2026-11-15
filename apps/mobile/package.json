@@ -1,0 +1,35 @@
+{
+  "name": "thinkwhat-mobile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ../../node_modules/expo/bin/cli start",
+    "android": "node ../../node_modules/expo/bin/cli run:android",
+    "ios": "node ../../node_modules/expo/bin/cli run:ios",
+    "web": "node ../../node_modules/expo/bin/cli start --web"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "@react-native-community/netinfo": "11.4.1",
+    "@react-native-firebase/app": "^21.6.1",
+    "@react-native-firebase/messaging": "^21.6.1",
+    "@reduxjs/toolkit": "^2.5.0",
+    "expo": "~52.0.0",
+    "expo-location": "~18.0.5",
+    "expo-secure-store": "~14.0.0",
+    "expo-status-bar": "~2.0.0",
+    "expo-build-properties": "~0.13.1",
+    "expo-task-manager": "~12.0.3",
+    "react": "18.3.1",
+    "react-native": "0.76.6",
+    "react-redux": "^9.2.0",
+    "redux-persist": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "~18.3.12",
+    "babel-preset-expo": "~12.0.8",
+    "typescript": "^5.3.3"
+  },
+  "private": true
+}

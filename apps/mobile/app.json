@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "ThinkWhat",
+    "slug": "thinkwhat",
+    "scheme": "thinkwhat",
+    "ios": {
+      "bundleIdentifier": "com.thinkwhat.app",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "ThinkWhat uses your location to show nearby shops that match your requirements.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "ThinkWhat alerts you in the background when you are within 500m of a shop that has what you need.",
+        "NSLocationAlwaysUsageDescription": "ThinkWhat alerts you in the background when you are near a matching shop.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch",
+          "remote-notification"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.thinkwhat.app",
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "POST_NOTIFICATIONS",
+        "RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "ThinkWhat alerts you in the background when you are within 500m of a matching shop.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true,
+          "isIosBackgroundLocationEnabled": true
+        }
+      ],
+      "@react-native-firebase/app",
+      "@react-native-firebase/messaging",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ]
+  }
+}
